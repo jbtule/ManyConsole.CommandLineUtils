@@ -1,4 +1,4 @@
-# ManyConsole.CommandLineUtils
+# ManyConsole.CommandLineUtils [![NuGet Status](http://img.shields.io/nuget/v/ManyConsole.CommandLineUtils.svg?style=flat)](https://www.nuget.org/packages/ManyConsole.CommandLineUtils/)
 
 [![Build Status](https://travis-ci.org/jbtule/ManyConsole.CommandLineUtils.svg?branch=master)](https://travis-ci.org/jbtule/ManyConsole.CommandLineUtils)
 [![Build status](https://ci.appveyor.com/api/projects/status/8xgxm51hxgba37qf?svg=true)](https://ci.appveyor.com/project/jbtule/manyconsole-commandlineutils)
