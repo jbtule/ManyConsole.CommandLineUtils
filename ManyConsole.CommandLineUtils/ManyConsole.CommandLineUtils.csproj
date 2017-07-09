@@ -5,16 +5,16 @@
     <Description>A near drop-in replacement for ManyConsole, wrapping Microsoft.Extensions.CommandLineUtils</Description>
     <Authors> Jay Tuley, Frank Schwieterman, Jonathan Pryor </Authors>
     <Copyright>Copyright 2017</Copyright>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
     <PackageProjectUrl>https://github.com/jbtule/ManyConsole.CommandLineUtils</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/fschwiet/ManyConsole.CommandLineUtils/blob/master/LICENSE.txt</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/jbtule/ManyConsole.CommandLineUtils/blob/master/LICENSE.txt</PackageLicenseUrl>
     <PackageTags>command-line console parsing manyconsole ndesk CommandLineUtils</PackageTags>
     <IncludeSymbols>True</IncludeSymbols>
     <IncludeSource>True</IncludeSource>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <Version>1.0.1-alpha</Version>
+    <Version>1.0.2-alpha</Version>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)'=='net20'">
