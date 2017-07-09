@@ -64,6 +64,15 @@ namespace ManyConsole.CommandLineUtils
                         return 2;
                     }
 
+                    if(RemainingArgumentsCount != 0){
+                        var actCount =(remainingArgs?.Values.Count() ?? 0);
+                        if(actCount < RemainingArgumentsCount){
+                            c.Out.WriteLine("Invalid number of arguments-- expected {1} more.", RemainingArgumentsCount - actCount);
+                            c.ShowHelp();
+                            return 2;
+                        }
+                    }
+
                     return Run(remainingArgs?.Values.ToArray() ?? new string []{});
                 });
             });
