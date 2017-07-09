@@ -1,0 +1,17 @@
+language: csharp
+os: osx
+
+solution: Dynamitey.sln
+    
+mono: beta
+dotnet: 1.0.4
+
+install:
+  - msbuild /t:restore
+
+script:
+  - msbuild /p:Configuration=Release
+
+branches:
+  only:
+    - master

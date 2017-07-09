@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManyConsole.CommandLineUtils", "ManyConsole.CommandLineUtils\ManyConsole.CommandLineUtils.csproj", "{84952FCE-704A-42F1-9FAA-52A8AF81EF6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleConsole", "SampleConsole\SampleConsole.csproj", "{6A87C664-FB5C-4ABA-9D73-584A82D93333}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84952FCE-704A-42F1-9FAA-52A8AF81EF6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84952FCE-704A-42F1-9FAA-52A8AF81EF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84952FCE-704A-42F1-9FAA-52A8AF81EF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84952FCE-704A-42F1-9FAA-52A8AF81EF6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A87C664-FB5C-4ABA-9D73-584A82D93333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A87C664-FB5C-4ABA-9D73-584A82D93333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A87C664-FB5C-4ABA-9D73-584A82D93333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A87C664-FB5C-4ABA-9D73-584A82D93333}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.5;net451;net20;</TargetFrameworks>
+    <Description>A near drop-in replacement for ManyConsole, wrapping Microsoft.Extensions.CommandLineUtils</Description>
+    <Authors> Jay Tuley, Frank Schwieterman, Jonathan Pryor </Authors>
+    <Copyright>Copyright 2012</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <PackageProjectUrl>https://github.com/jbtule/ManyConsole.CommandLineUtils</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/fschwiet/ManyConsole.CommandLineUtils/blob/master/COPYING.md</PackageLicenseUrl>
+    <PackageTags>command-line console parsing manyconsole ndesk CommandLineUtils</PackageTags>
+    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Version>1.0.0-alpha</Version>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)'=='net20'">
+      <PackageReference Include="Net20.Extensions.CommandLineUtils" Version="1.1.*" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'!='net20'">
+    <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.*" />
+    <PackageReference Include="System.ComponentModel.TypeConverter" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Internal\" />
+  </ItemGroup>
+</Project>
