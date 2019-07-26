@@ -8,13 +8,13 @@
     <AssemblyVersion>1.0.3.0</AssemblyVersion>
     <FileVersion>1.0.3.0</FileVersion>
     <PackageProjectUrl>https://github.com/jbtule/ManyConsole.CommandLineUtils</PackageProjectUrl>
-    <LicenseExpresion>mit</LicenseExpresion>
+    <PackageLicenseExpression>mit</PackageLicenseExpression>
     <PackageTags>command-line console parsing manyconsole ndesk CommandLineUtils</PackageTags>
     <IncludeSymbols>True</IncludeSymbols>
     <IncludeSource>True</IncludeSource>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Version>1.1.0-alpha</Version>
+    <Version>1.1.1-alpha</Version>
   </PropertyGroup>
 
   <ItemGroup>
