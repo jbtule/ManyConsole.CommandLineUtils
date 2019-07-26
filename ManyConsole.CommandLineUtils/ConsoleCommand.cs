@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using ManyConsole.CommandLineUtils.Internal;
-using Microsoft.Extensions.CommandLineUtils;
+using McMaster.Extensions.CommandLineUtils;
 
 namespace ManyConsole.CommandLineUtils
 {
