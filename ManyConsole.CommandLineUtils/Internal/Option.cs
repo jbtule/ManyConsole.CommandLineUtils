@@ -58,10 +58,13 @@ namespace ManyConsole.CommandLineUtils.Internal
         {
            
             var template = MassagedTemplate();
+            var singleOrNo_Multiple = Template.Contains(":")
+                ? CommandOptionType.SingleOrNoValue 
+                : CommandOptionType.MultipleValue;
 
-            CmdOption =app.Option(template,Description,
+            CmdOption = app.Option(template,Description,
                                   template.Contains("<")
-                                    ? CommandOptionType.MultipleValue 
+                                    ? singleOrNo_Multiple
                                     : CommandOptionType.NoValue);
             return CmdOption;
         }

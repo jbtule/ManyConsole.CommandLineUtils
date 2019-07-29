@@ -15,7 +15,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <Version>1.1.3-alpha</Version>
+    <Version>1.1.4-alpha</Version>
   </PropertyGroup>
 
   <ItemGroup>
