@@ -41,39 +41,42 @@ namespace ManyConsole.CommandLineUtils
                     remainingArgs =c.Argument("", RemainingArgumentsHelpText, multipleValues: (RemainingArgumentsCount ?? 100) > 1);
                 }
                 c.OnExecute(() => {
-                    if(TraceCommandAfterParse){
-                        string introLine = String.Format("Executing {0}", Command);
+                    
+                    try{
+                        if(TraceCommandAfterParse){
+                            string introLine = String.Format("Executing {0}", Command);
 
-                        if ((OneLineDescription?.Length ?? 0) == 0){
-                            introLine += String.Format(" ({0})",OneLineDescription);
+                            if ((OneLineDescription?.Length ?? 0) == 0){
+                                introLine += String.Format(" ({0})",OneLineDescription);
+                            }
+
+                            c.Out.WriteLine(introLine);
+
+                        }
+                        foreach (var option in OptionsHasd)
+                        {
+                            option.Invoke();
                         }
 
-                        c.Out.WriteLine(introLine);
-
-                    }
-                    foreach (var option in OptionsHasd)
-                    {
-                        option.Invoke();
-                    }
-
-                    try{
                         CheckRequiredArguments();
+                
+                        if(RemainingArgumentsCount != 0){
+                            var actCount =(remainingArgs?.Values.Count() ?? 0);
+                            if(actCount < RemainingArgumentsCount){
+                                c.Out.WriteLine("Invalid number of arguments-- expected {1} more.", RemainingArgumentsCount - actCount);
+                                c.ShowHelp();
+                                return 2;
+                            }
+                        }
+
+                        return Run(remainingArgs?.Values.ToArray() ?? new string []{});
+
                     }catch(ConsoleHelpAsException ex){
                         c.Out.WriteLine(ex.Message);
                         c.ShowHelp();
                         return 2;
                     }
 
-                    if(RemainingArgumentsCount != 0){
-                        var actCount =(remainingArgs?.Values.Count() ?? 0);
-                        if(actCount < RemainingArgumentsCount){
-                            c.Out.WriteLine("Invalid number of arguments-- expected {1} more.", RemainingArgumentsCount - actCount);
-                            c.ShowHelp();
-                            return 2;
-                        }
-                    }
-
-                    return Run(remainingArgs?.Values.ToArray() ?? new string []{});
                 });
             });
         }
