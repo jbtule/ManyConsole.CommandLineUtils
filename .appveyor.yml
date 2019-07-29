@@ -9,6 +9,6 @@ build_script:
 test: off
 
 artifacts:
-  - path: '**\bin\*\*.nupkg'
+  - path: '**\bin\*\*.[s]*nupkg'
 
 skip_branch_with_pr: true
