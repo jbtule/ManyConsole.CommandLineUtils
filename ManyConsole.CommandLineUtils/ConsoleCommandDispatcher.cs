@@ -51,7 +51,7 @@ namespace ManyConsole.CommandLineUtils
             var assemblyName =Assembly.GetEntryAssembly()?.GetName();
             app.FullName = assemblyName?.Name;
 
-            app.VersionOption("-v|--version", assemblyName?.Version.ToString(), assemblyName.Version?.ToString());
+            app.VersionOption("-v|--version", assemblyName?.Version.ToString(), assemblyName?.Version.ToString());
 
             app.HelpOption("-?|-h|--help");
 
