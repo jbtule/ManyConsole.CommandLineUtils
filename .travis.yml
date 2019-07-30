@@ -1,7 +1,7 @@
 language: csharp
 
-dotnet: 2.1.508
-mono: 6.0.0
+dotnet: 2.1.508 #lts
+mono: 5.20.1
 
 matrix:
   include:
