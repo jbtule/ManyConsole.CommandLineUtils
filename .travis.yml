@@ -1,6 +1,6 @@
 language: csharp
 
-dotnet: 2.1.508 #lts
+dotnet: 2.1.605
 mono: 5.20.1
 
 matrix:
