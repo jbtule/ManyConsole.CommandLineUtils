@@ -42,10 +42,10 @@ namespace ManyConsole.CommandLineUtils
 #endif
         }
 
-        public static int DispatchCommand(IEnumerable<ConsoleCommand> commands, string[] arguments, TextWriter consoleOut)
+        public static int DispatchCommand(IEnumerable<ConsoleCommand> commands, string[] arguments, TextWriter consoleOut, Action<CommandLineApplication> config = null)
         {
             var app = new CommandLineApplication();
-           
+            
             app.Out = consoleOut;
 
             var assemblyName =Assembly.GetEntryAssembly()?.GetName();
@@ -54,6 +54,8 @@ namespace ManyConsole.CommandLineUtils
             app.VersionOption("-v|--version", assemblyName?.Version.ToString(), assemblyName?.Version.ToString());
 
             app.HelpOption("-?|-h|--help");
+
+            config?.Invoke(app);
 
             app.OnExecute(() =>
             {
