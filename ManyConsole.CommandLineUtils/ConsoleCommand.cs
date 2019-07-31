@@ -28,6 +28,7 @@ namespace ManyConsole.CommandLineUtils
                 c.FullName = Command;
                 c.Description = OneLineDescription;
                 c.ExtendedHelpText = LongDescription;
+                c.UsePagerForHelpText = app.UsePagerForHelpText;
 
                 foreach (var option in OptionsHasd)
                 {
